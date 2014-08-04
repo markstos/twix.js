@@ -1,0 +1,128 @@
+$brand-primary: hsl(171,34,53);
+
+@import 'bootstrap';
+@import 'font-awesome';
+@import 'syntax';
+
+@mixin blocked {
+  background-color: $brand-primary;
+  color: white;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.hero {
+  h1 {
+    font-size: 60px;
+  }
+  text-align: center;
+  @include blocked;
+}
+
+.docs {
+  position: relative;
+
+  h2 {
+    @include blocked;
+  }
+
+}
+
+#toc.affix {
+  top: 10px;
+}
+
+#navbar {
+  background-color: black;
+  margin-bottom: 10px;
+
+  #title {
+    font-size: 30px;
+    margin-top: 7px;
+    margin-bottom: 7px;
+
+    a {
+      color: $brand-primary;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+
+  .nav-pills {
+
+    margin-top: 7px;
+    margin-bottom: 7px;
+  }
+}
+
+#toc > ul {
+  overflow-y: auto;
+  font-size: 14px;
+  line-height: 18px;
+  padding-left: 4px;
+
+  list-style-type: none;
+
+  li {
+    border-left: 2px solid transparent;
+  }
+
+  a {
+    display: inline-block;
+    width: 100%;
+    text-decoration: none;
+  }
+
+  //section
+  > li {
+
+    > a {
+      color: black;
+      font-size: 18px;
+      line-height: 24px;
+      padding-top: 10px;
+      padding-bottom: 4px;
+
+      &:hover {
+        background-color: none;
+      }
+    }
+
+    &.active {
+      a {
+        font-weight: bold;
+      }
+    }
+
+    > ul {
+      padding-left: 0;
+    }
+
+    > ul > li {
+      display: none;
+
+      border-left-color: rgba($brand-primary, 0.3);
+
+      &:hover,
+      &.active {
+        background: rgba($brand-primary, 0.1);
+        border-left-color: $brand-primary;
+      }
+
+      a {
+        color: $brand-primary;
+        padding-left: 40px;
+        padding-top: 4px;
+        padding-bottom: 4px;
+      }
+    }
+
+    &.active {
+      > ul > li {
+        display: block;
+      }
+    }
+  }
+}

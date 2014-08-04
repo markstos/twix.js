@@ -1,0 +1,21 @@
+doctype 5
+html
+  head
+    title Twix.js
+    = stylesheet_link_tag  "twix"
+    = javascript_include_tag  "twix-site"
+
+  body
+    #navbar
+      .container
+        #title.pull-left
+          a href= "/" Twix.js
+        ul.nav.nav-pills.pull-right
+          li class="#{@tab == 'home' ? 'active' : ''}" 
+            a href='/' Home
+          li  class="#{@tab == 'docs' ? 'active' : ''}"
+            a href='/docs.html' Docs
+          li
+            a href='https://github.com/icambron/twix.js' Github
+
+    = yield

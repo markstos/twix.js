@@ -1,0 +1,8 @@
+.container.docs
+  .row
+    .col-md-9
+      = markdown_partial("twix.js/docs/docs.markdown")
+    .col-md-3
+      #toc data-spy='affix' data-offset-top="40"
+        = toc("twix.js/docs/docs.markdown")
+

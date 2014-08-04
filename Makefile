@@ -1,4 +1,4 @@
 .PHONY: build
 build:
-	@jekyll build
-	@cp -r build/* .
+	@git submodule foreach git pull origin master
+	@middleman build

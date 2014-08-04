@@ -1,0 +1,12 @@
+[submodule "source/twix.js"]
+	path = source/twix.js
+	url = git@github.com:icambron/twix.js.git
+	branch = master
+[submodule "twix.js"]
+	path = twix.js
+	url = git@github.com:icambron/twix.js.git
+	branch = gh-pages
+[submodule "build"]
+	path = build
+	url = git@github.com:icambron/twix.js.git
+	branch = gh-pages
