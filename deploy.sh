@@ -5,7 +5,7 @@ git pull
 cd ../..
 
 
-middleman build
+bundle exec middleman build
 cd build
 git add .
 git commit -am "build"

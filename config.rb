@@ -1,4 +1,5 @@
 activate :livereload
+activate :relative_assets
 
 page "/" do
   @tab = "home"
