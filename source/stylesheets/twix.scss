@@ -26,6 +26,12 @@
 
 }
 
+@media (max-width: $screen-md-min) {
+  #toc {
+    display: none;
+  }
+}
+
 #toc.affix {
   top: 10px;
 }

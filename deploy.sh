@@ -4,7 +4,6 @@ cd source/twix.js
 git pull
 cd ../..
 
-
 bundle exec middleman build
 cd build
 git add .
