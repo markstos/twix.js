@@ -1,6 +1,8 @@
 activate :livereload
 activate :relative_assets
 
+ignore(/^twix.js\/(?:(?!dist))/)
+
 page "/" do
   @tab = "home"
 end
