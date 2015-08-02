@@ -1,7 +1,7 @@
 #!/bin/bash
 
 cd source/twix.js
-git pull
+git pull origin master
 cd ../..
 
 bundle exec middleman build
